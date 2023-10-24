@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "6d607156-2983-4fa0-bfec-ecbf51b09e2e",
+		"name": "Companies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19230294"
+	},
+	"item": [
+		{
+			"name": "list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/companies?companyIds[]=5&companyIds[]=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies"
+					],
+					"query": [
+						{
+							"key": "companyIds[]",
+							"value": "5"
+						},
+						{
+							"key": "companyIds[]",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"companyId\": 101,\n    \"companyName\": \"Teszt Company 1\",\n    \"companyRegistrationNumber\": 1778745579,\n    \"companyFoundationDate\": \"1990.05.01\",\n    \"country\": \"Belarus\",\n    \"zipCode\": 71137,\n    \"city\": \"Villa Verde\",\n    \"streetAddress\": \"P.O. Box 391, 1457 Sed St.\",\n    \"latitude\": 50.67063,\n    \"longitude\": -75.377,\n    \"companyOwner\": \"Travis Elliott\",\n    \"employees\": 11,\n    \"activity\": \"Car\",\n    \"active\": true,\n    \"email\": \"Donec.sollicitudin@Duisacarcu.com\",\n    \"password\": \"felis\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/companies/101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"companyId\": 101,\n    \"companyName\": \"Teszt Company 1\",\n    \"companyRegistrationNumber\": 1778745579,\n    \"companyFoundationDate\": \"1990.05.01\",\n    \"country\": \"Belarus\",\n    \"zipCode\": 71137,\n    \"city\": \"Villa Verde\",\n    \"streetAddress\": \"P.O. Box 391, 1457 Sed St.\",\n    \"latitude\": 50.67063,\n    \"longitude\": -75.377,\n    \"companyOwner\": \"Travis Elliott\",\n    \"employees\": 11,\n    \"activity\": \"Car\",\n    \"active\": true,\n    \"email\": \"Donec.sollicitudin@Duisacarcu.com\",\n    \"password\": \"felis\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/companies/101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies",
+						"101"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
